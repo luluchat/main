@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>LuluChat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <center>
+      <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+      <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBBMJMde_V83CfchOZ5jq1oSVz5j9T1R1c",
+        authDomain: "luluchat-8c834.firebaseapp.com",
+        databaseURL: "https://luluchat-8c834.firebaseio.com",
+        projectId: "luluchat-8c834",
+        storageBucket: "luluchat-8c834.appspot.com",
+        messagingSenderId: "209655126209",
+        appId: "1:209655126209:web:b47c4fc9b0128e82379c40"
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      </script>
+      <img src="emoticons/luluface.png" width="60">
+      <h1>LuluChat</h1>
+      <p>The Best The "We Group" Can Get</p>
+      <h2>Sign Up</h2>
+      <h4 onclick="goSomewhere('login.html')">Already have an account? Log in</h4>
+      <h3>Username</h3>
+      <input type="text" id="username">
+      <h3>Display Name</h3>
+      <input type="text" maxlength="20" id="displayname">
+      <h3>Password</h3>
+      <input type="password" id="password">
+      <br>
+      <button onclick="signup()">Submit</button>
+    </center>
+  </body>
+</html>
